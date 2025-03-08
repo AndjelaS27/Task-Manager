@@ -48,7 +48,7 @@ function TaskList({ dayTasks, onDelete, onEdit, isSelected }) {
             <p
               key={type}
               onClick={() => setSelectedType(type)}
-              className={`w-[7.5vw] text-center rounded-lg mb-5 cursor-pointer text-white ${
+              className={`w-[15vw] md:w-[10vw] lg:w-[7.5vw] text-center rounded-lg mb-5 cursor-pointer text-white ${
                 selectedType === type ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-gray-500'
               }`}
             >

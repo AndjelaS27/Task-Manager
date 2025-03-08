@@ -1,31 +1,3 @@
 {
-  "taskList": [
-    {
-      "id": "ebe4",
-      "taskName": "Izvesti Luia napolje",
-      "days": [
-        "Mon"
-      ],
-      "startTime": "02:34",
-      "endTime": "03:32",
-      "orderNumber": 1,
-      "taskType": "education",
-      "isFinished": {
-        "Mon": true
-      }
-    },
-    {
-      "id": "f187",
-      "taskName": "nflsenk",
-      "days": [
-        "Wed",
-        "Fri",
-        "Sat"
-      ],
-      "startTime": "17:33",
-      "endTime": "17:33",
-      "orderNumber": 2,
-      "taskType": "other"
-    }
-  ]
+  "taskList": []
 }

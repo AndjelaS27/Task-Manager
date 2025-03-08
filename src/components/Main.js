@@ -4,7 +4,7 @@ import TaskList from './TaskList';
 import { MdAdd } from 'react-icons/md';
 import DashbordWidgetView from './DashbordWidgetView';
 import { useAddTaskMutation, useDeleteTaskMutation, useEditTaskMutation, useGetTasksQuery } from './rtk'
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 function Main ({handleDaysBorder, isSelected}) {
@@ -80,14 +80,14 @@ function Main ({handleDaysBorder, isSelected}) {
     return (
         <div className='w-[100%] h-[100vh]'>
             <div className='flex flex-row items-center justify-center w-[100%] gap-20'>
-                <p onClick={() => handleSetContent('list')} className={`w-[10vw] text-center rounded-2xl mt-10 p-3 cursor-pointer text-white ${contentType === 'list' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-gray-500'}`}>List View</p>
-                <p onClick={() => handleSetContent('dashbord')} className={`w-[10vw] text-center rounded-2xl mt-10 p-3 cursor-pointer text-white ${contentType === 'dashbord' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-gray-500'}`}>Dashbord View</p>
+                <p onClick={() => handleSetContent('list')} className={`text-center rounded-2xl mt-10 p-3 cursor-pointer text-white ${contentType === 'list' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-gray-500'}`}>List View</p>
+                <p onClick={() => handleSetContent('dashbord')} className={`text-center rounded-2xl mt-10 p-3 cursor-pointer text-white ${contentType === 'dashbord' ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' : 'bg-gray-500'}`}>Dashbord View</p>
             </div>
             <div className='justify-items-center mt-10'>
-                <div className='flex flex-col items-center justify-center drop-shadow-xl w-[90vh] h-[70vh] rounded-3xl bg-white/10 border border-white/20 backdrop-blur-lg shadow-3xl'>
+                <div className='flex flex-col items-center justify-center drop-shadow-xl w-[95vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] h-[70vh] rounded-3xl bg-white/10 border border-white/20 backdrop-blur-lg shadow-3xl'>
                     {contentToShow}
                     {shoudShowAddTask && contentType === 'list' && (
-                        <div onClick={handleShowContent} className='w-[25%] cursor-pointer self-end justify-center flex items-center border-2 border-cyan-500 rounded-full mb-5 mr-5'>
+                        <div onClick={handleShowContent} className='w-[30vw] sm:w-[25vw] md:w-[25%] cursor-pointer self-end justify-center flex items-center border-2 border-cyan-500 rounded-full mb-5 mr-5'>
                             <p className='text-center w-[100%] text-lg text-white'>Add task</p>
                             <div className='h-11 w-11 self-end rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 p-2 items-center flex'>
                                 <MdAdd color='white' size={30}/>

@@ -15,7 +15,7 @@ function Dashboard ({daysBorder, isSelected, setIsSelected}) {
         return (
             <div onClick={() => handleClick(day)}
                 key={index} 
-                className={`w-[80%] h-[10vh] rounded-3xl flex items-center justify-center text-white ${bgColor}`}
+                className={`w-[21%] md:w-[80%] h-[10vh] rounded-3xl flex items-center justify-center self-center text-white ${bgColor}`}
                 style={borderColor}
             >
                 <p>{day}</p>
@@ -24,7 +24,7 @@ function Dashboard ({daysBorder, isSelected, setIsSelected}) {
     })
 
     return (
-        <div className='w-[20%] h-[95vh] bg-[#282727] self-center ml-5 rounded-3xl flex flex-col items-center justify-center gap-5'>
+        <div className='w-[95%] md:w-[20%] md:h-[95vh] bg-[#282727] self-center mt-5 md:mt-0 md:ml-5 py-3 md:py-0 rounded-3xl flex flex-wrap md:flex-col items-center justify-center gap-5'>
             {renderedDays}
         </div>
     )

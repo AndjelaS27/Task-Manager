@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div className='flex'>
+      <div className='flex flex-col md:flex-row'>
         <Dashboard isSelected={isSelected} setIsSelected={setIsSelected} daysBorder={daysBorder}/>
         <Main isSelected={isSelected} handleDaysBorder={handleDaysBorder}/>
       </div>
